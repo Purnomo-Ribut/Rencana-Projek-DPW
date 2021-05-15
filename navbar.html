@@ -49,7 +49,7 @@
       border-radius: 5px;
       text-transform: uppercase;
     }
-    a.active,a:hover{
+    a.active,a:hover,.turun:hover #menu{
       background: #1b9bff;
       transition: .5s;
     }
@@ -104,6 +104,28 @@
         left: 0;
       }
     }
+    .list-menu{
+      display: none; 
+      position: absolute; 
+      background-color: rgba(0, 0, 255, 0.5);
+      box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    .list-menu a{
+      color: white;
+      padding: 12px 16px;
+      display: block;
+      text-align: left;
+      text-transform: none;
+      line-height: 30px;
+    }
+    .list-menu a:hover {
+      background-color: rgba(0, 0, 255, 0.5);
+      color: white;
+    }
+    .turun:hover .list-menu{
+      display: block;
+    }
     </style>
   </head>
   <body>
@@ -112,15 +134,21 @@
       <label for="check" class="checkbtn">
         <i class="fas fa-bars"></i>
       </label>
+
       <label class="logo"><i class="fas fa-cart-plus" style="padding: 15px;"></i>Toko Baru</label>
       <ul>
         <li><a class="active" href="#"><i class="fas fa-home"></i>     Beranda</a></li>
-        <li><a href="#" class="list">Kategory</a></li>
+        <li class="turun">
+          <a href="kategori baju pria sama wanita.html" id="menu">Kategory</a>
+            <div class="list-menu">
+              <a href="fashion pria.html">Fashion Pria</a>
+              <a href="#">Fashion Wanita</a>
+            </div>
+        </li>
         <li><a href="#">Membeli</a></li>
         <li><a href="#">Tentang Kami</a></li>
       </ul>
     </nav>
-
-    <footer></footer>
   </body>
 </html>
+
